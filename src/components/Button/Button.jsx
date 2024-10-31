@@ -1,12 +1,5 @@
-const Button = ({ onClick }) => {
-  return (
-    <button
-      onClick={() => onClick()}
-      type="submit"
-    >
-      submit
-    </button>
-  );
+const Button = () => {
+  return <button type="submit">submit</button>;
 };
 
 export default Button;

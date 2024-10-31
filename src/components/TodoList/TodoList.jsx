@@ -1,15 +1,17 @@
 import Todo from "../Todo/Todo";
 import styles from "./Todo.module.css";
 
-const TodoList = ({ todos }) => {
+const TodoList = ({ todos, deleteTodo }) => {
   return (
     <>
       {todos.length > 0 ? (
         <ul className={styles.list}>
-          {todos.map((todo, key) => (
+          {todos.map((todo, index) => (
             <Todo
-              key={key}
+              key={index}
+              index={index}
               todo={todo}
+              deleteTodo={deleteTodo}
             />
           ))}
         </ul>
