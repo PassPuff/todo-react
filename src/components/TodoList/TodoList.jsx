@@ -6,10 +6,9 @@ const TodoList = ({ todos, deleteTodo }) => {
     <>
       {todos.length > 0 ? (
         <ul className={styles.list}>
-          {todos.map((todo, index) => (
+          {todos.map((todo) => (
             <Todo
-              key={index}
-              index={index}
+              key={todo.id}
               todo={todo}
               deleteTodo={deleteTodo}
             />
