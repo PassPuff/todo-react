@@ -1,7 +1,7 @@
 import Todo from "../Todo/Todo";
 import styles from "./Todo.module.css";
 
-const TodoList = ({ todos, deleteTodo }) => {
+const TodoList = ({ todos, deleteTodo, toggleToDo }) => {
   return (
     <>
       {todos.length > 0 ? (
@@ -11,6 +11,7 @@ const TodoList = ({ todos, deleteTodo }) => {
               key={todo.id}
               todo={todo}
               deleteTodo={deleteTodo}
+              toggleToDo={toggleToDo}
             />
           ))}
         </ul>
