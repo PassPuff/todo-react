@@ -1,21 +1,28 @@
 import { RiTodoFill, RiDeleteBack2Line, RiCheckFill } from "react-icons/ri";
 import styles from "./Todo.module.css";
+import Button from "../Button/Button";
 
 const Todo = ({ todo, deleteTodo, toggleToDo }) => {
   return (
-    <li className={styles.todo}>
+    <li className={`${styles.todo} ${todo.isDone ? styles.todoDone : ""}`}>
       <span>
         <RiTodoFill />
         {todo.text}
       </span>
 
       <span>
-        <button onClick={() => toggleToDo(todo.id)}>
+        <Button
+          onClick={() => toggleToDo(todo.id)}
+          title="Done"
+        >
           <RiCheckFill />
-        </button>
-        <button onClick={() => deleteTodo(todo.id)}>
+        </Button>
+        <Button
+          onClick={() => deleteTodo(todo.id)}
+          title="Delete"
+        >
           <RiDeleteBack2Line />
-        </button>
+        </Button>
       </span>
     </li>
   );

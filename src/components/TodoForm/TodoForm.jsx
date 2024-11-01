@@ -19,7 +19,12 @@ const TodoForm = ({ addTodo }) => {
         value={text}
         onChange={(e) => setText(e.target.value)}
       />
-      <Button type="submit" />
+      <Button
+        type="submit"
+        title="submit"
+      >
+        Submit
+      </Button>
     </form>
   );
 };

@@ -16,7 +16,7 @@ const TodoList = ({ todos, deleteTodo, toggleToDo }) => {
           ))}
         </ul>
       ) : (
-        "Todo list is empty"
+        <h2>Todo list is empty</h2>
       )}
     </>
   );
